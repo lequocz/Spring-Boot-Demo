@@ -1,0 +1,40 @@
+<div class="container yourDiv" id="addContent">
+  <div class="d-flex">
+    <h4>Add Content</h4>
+  </div>
+  <hr>
+  <div class="card">
+    <span th:text="${message}" th:if="${message}"  class="alert alert-success d-flex"></span>
+    <div class="card-header">
+      Content Form Elements
+    </div>
+    <div class="card-body">
+      <form class="form-group" id="formAddContent" method="post" th:action="@{/addContent}" th:object="${contentt}">
+        <div class="form-group register-form">
+          <div class="form-group">
+            <label for="title" class="d-block">Title</label>
+            <span id="titleError" class=""></span>
+            <input class="form-control" id="title" th:field="*{title}" type="text" placeholder="Enter the title">
+          </div>
+
+          <div class="form-group">
+            <label for="brief" class="d-block">Brief</label>
+            <span id="briefError" class=""></span>
+            <textarea class="form-control"  id="brief" th:field="*{brief}" cols="" rows="2"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="content" class="d-block">Content</label>
+            <span id="contentError" class=""></span>
+            <textarea class="form-control" th:field="*{content}" id="contentip" cols="" rows="5"></textarea>
+          </div>
+
+          <div class="form-group row add-body-button">
+            <button type="submit" onclick=" return checkFormAddContent()" class="btn btn-success m-1">Submit</button>
+            <button type="reset" onclick="resetAddContent()" class="btn btn-success m-1">Reset</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+
+<div class="container yourDiv" id="viewContent">
+  <div class="d-flex">
+    <h4>View Content</h4>
+  </div>
+  <hr>
+  <div>
+    <div class="card ">
+      <div class="card-header viewContentList">
+        <span>View Content List</span>
+      </div>
+
+      <div class="card-body">
+        <table class="table-bordered table-striped ">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Brief</th>
+            <th>Created Data</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <th:block th:each="content : ${contents}">
+            <tr>
+              <td th:text="${content.id}"></td>
+              <td th:text="${content.title}"></td>
+              <td th:text="${content.brief}"></td>
+              <td th:text="${content.createDate}"></td>
+            </tr>
+          </th:block>
+
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,61 @@
+
+<div class="container yourDiv" id="editProfile">
+  <div class="d-flex">
+    <h4>Edit Profile</h4>
+    <hr>
+  </div>
+  <hr>
+  <div>
+    <div class="card">
+      <div class="card-header ">
+        <span>Profile Form Elements</span>
+      </div>
+
+      <div class="card-body">
+        <form th:action="@{/editProfile}" method="post" th:object="${member}" class="form-group">
+          <div class="form-group">
+            <div class="form-group">
+              <label class="d-block" for="firstname">First Name</label>
+              <span id="firstnameError"></span>
+              <input class="form-control" id="firstname" th:field="*{firstName}" type="text"
+                     placeholder="Enter the first name">
+            </div>
+
+            <div class="form-group">
+              <label for="lastname" class="d-block">Last Name</label>
+              <span id="lastnameError"></span>
+              <input class="form-control" id="lastname" th:field="*{lastName}" type="text"
+                     placeholder="Enter the last name">
+            </div>
+
+            <div class="form-group">
+              <label for="">Email</label>
+              <input class="form-control" id="email" th:field="*{email}" type="email"
+                     placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+              <label for="phone" class="d-block">Phone</label>
+              <span id="phoneError"></span>
+              <input class="form-control" id="phone" th:field="*{phone}" type="text"
+                     placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" th:field="*{description}" id="description"
+                        maxlength="200" cols="" rows="2"></textarea>
+            </div>
+
+            <div class="form-group row ">
+              <button type="submit" onclick=" return checkFormEditProfile()"
+                      class="btn btn-success m-1">Submit</button>
+              <button type="reset" onclick="resetEditProfile()"
+                      class="btn btn-success m-1">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

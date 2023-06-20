@@ -1,0 +1,43 @@
+#header {
+    justify-content: space-between;
+    padding: 10px 40px;
+    background: #F5F5F5;
+    border-bottom: 1px solid #D9D9D9;
+
+}
+
+td,
+th {
+    padding: 10px 20px;
+}
+
+#content {
+    padding: 40px;
+}
+
+.viewContentList {
+    justify-content: space-between;
+    background: rgba(217, 217, 217, 0.75);
+}
+
+.col-sm-3 {
+    background: #F5F5F5;
+    border-right: 1px solid #D9D9D9;
+}
+
+.contentLink {
+    align-items: center;
+    height:62px;
+    border-bottom: 1px solid #D9D9D9;
+}
+#search{
+    height: calc(1.5em + 0.75rem + 2px);
+}
+.contentsearch{
+    height:62px;
+    border-bottom: 1px solid #D9D9D9;
+}
+.col-sm-3{
+    padding-right: 0px;
+    padding-top: 20px;
+}
